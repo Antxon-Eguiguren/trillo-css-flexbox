@@ -1,0 +1,62 @@
+@font-face {
+    font-family: 'OperatorMonoLig-Book';
+    src: url('../font/OperatorMonoLig-Book.eot');
+    src: url('../font/OperatorMonoLig-Book.eot?#iefix') format('embedded-opentype'),
+         url('../font/OperatorMonoLig-Book.svg#OperatorMonoLig-Book') format('svg'),
+         url('../font/OperatorMonoLig-Book.ttf') format('truetype'),
+         url('../font/OperatorMonoLig-Book.woff') format('woff'),
+         url('../font/OperatorMonoLig-Book.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+:root {
+    --color-primary: #eb2f64;
+    --color-primary-light: #FF3366;
+    --color-primary-dark: #BA265D;
+    --color-grey-light-1: #faf9f9;
+    --color-grey-light-2: #f4f2f2;
+    --color-grey-light-3: #f0eeee;
+    --color-grey-light-4: #ccc;
+    --color-grey-dark-1: #333;
+    --color-grey-dark-2: #777;
+    --color-grey-dark-3: #999;
+
+    --shadow-dark: 0 2rem 6rem rgba(0, 0, 0, .3);
+}
+
+// BREAKPOINTS FOR MEDIA QUERIES
+$bp-largest: 75em;      // 1200px/16px = 75em
+$bp-large: 68.75em;     // 1100px/16px = 68.75em
+$bp-medium: 56.25em;    // 900px/16px = 56.25em
+$bp-small: 43.75em;     // 700px/16px = 43.75em
+$bp-smallest: 30em;     // 480px/16px = 30em
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;       // Para facilitar las cuentas, queremos que 1rem = 10px --> 10px/16px = 62.5%
+
+    @media only screen and (max-width: $bp-large) {
+        font-size: 52%;     // 8px/16px = 50%
+    }
+}
+
+body {
+    font-family: 'OperatorMonoLig-Book';
+    color: var(--color-grey-dark-2);
+    line-height: 1.6;
+    background-image: linear-gradient(to right bottom, var(--color-primary-light), var(--color-primary-dark));
+    background-size: cover;
+    background-repeat: no-repeat;
+}
